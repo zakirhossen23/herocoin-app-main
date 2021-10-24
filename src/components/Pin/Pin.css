@@ -1,0 +1,19 @@
+.pin {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.pin .digit {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 2px solid var(--secondary-color);
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 40px;
+}

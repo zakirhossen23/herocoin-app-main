@@ -1,0 +1,21 @@
+.logo {
+    width: 85%;
+    margin-bottom: 10px;
+}
+.slogan-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+
+    color: #D1B138;
+}

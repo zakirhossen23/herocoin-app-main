@@ -1,0 +1,83 @@
+.page.explanation {
+    display: flex;
+    flex-direction: column;
+    background: #74B370;
+}
+
+.explanation .top {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.explanation .container {
+    width: calc(100% - 40px);
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.explanation .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 46px;
+
+    color: #EC6D5F;
+
+    text-align: center;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.explanation .description {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #716B6B;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.explanation .subheader {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #74B370;
+    margin-left: 20px;
+}
+
+.explanation .button {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.explanation .footer-button {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #F8F8F7;
+
+    background: #EC6D5F;
+    border-radius: 24px;
+
+    padding: 10px 4px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

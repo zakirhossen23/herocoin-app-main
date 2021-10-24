@@ -1,0 +1,39 @@
+.page.date {
+    display: flex;
+    flex-direction: column;
+}
+
+.date .top {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.date .content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.date .footer-button {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #F8F8F7;
+
+    background: #EC6D5F;
+    border-radius: 24px;
+
+    padding: 10px 4px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}

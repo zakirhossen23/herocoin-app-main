@@ -1,0 +1,18 @@
+.input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 8px;
+}
+.input input {
+    height: 40px;
+    padding-left: 20px;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 1px solid var(--secondary-color);
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px;
+}

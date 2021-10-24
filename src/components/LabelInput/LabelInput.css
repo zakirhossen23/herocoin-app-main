@@ -1,0 +1,31 @@
+.label-input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 18px;
+}
+
+.label-input label {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+
+    text-transform: capitalize;
+
+    color: #74B370;
+    margin-bottom: 4px;
+}
+
+.label-input input {
+    height: 50px;
+    padding-left: 20px;
+    cursor: pointer;
+    background: #F8F8F7;
+    border: 1px solid #74B370;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px;
+}

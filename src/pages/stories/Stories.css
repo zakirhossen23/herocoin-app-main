@@ -1,0 +1,46 @@
+.page.stories {
+    display: flex;
+    flex-direction: column;
+}
+
+.stories .top {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.stories .action {
+    background: #EC6D5F;
+    border: 1px solid #EF402D;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    padding: 16px 16px;
+    color: #FFFFFF;
+    margin-left: 22px;
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+
+.stories .tabbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0   ;
+}
+
+.stories .thank-you-message {
+    margin-left: auto;
+}
+
+.stories .stories-button {
+    width: 212px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    cursor: pointer;
+}

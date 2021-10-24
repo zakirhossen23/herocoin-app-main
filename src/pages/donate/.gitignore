@@ -1,0 +1,4 @@
+/target/
+solana-wallet
+.env
+node_modules
