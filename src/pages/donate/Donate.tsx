@@ -42,7 +42,10 @@ export function Donate() {
                         <input ref={output} type="number" />
                     </div>
                 </div>
-                <img onClick={() => main2()} className="button" src={DonateButton} />
+                <img onClick={() => {
+                    main2()
+                    history.push("/thank-you")
+                }} className="button" src={DonateButton} />
                 <span className="spacer"></span>
                 <img src={Tabbar} />
             </div>
