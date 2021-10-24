@@ -121,60 +121,53 @@ export async function checkProgram(): Promise<void> {
     programId = programKeypair.publicKey
   } catch (err) {
     const errMsg = (err as Error).message
-    throw new Error(
-      `Failed to read program keypair at '${PROGRAM_KEYPAIR_PATH}' due to error: ${errMsg}. Program may need to be deployed with \`solana program deploy target/deploy/chainlink_solana_demo.so --keypair solana-wallet/keypair.json\``,
-    )
+    // throw new Error(
+    //   `Failed to read program keypair at '${PROGRAM_KEYPAIR_PATH}' due to error: ${errMsg}. Program may need to be deployed with \`solana program deploy target/deploy/chainlink_solana_demo.so --keypair solana-wallet/keypair.json\``,
+    // )
   }
 
   // Check if the program has been deployed
-  const programInfo = await connection.getAccountInfo(programId)
-  if (programInfo === null) {
-    if (fs.existsSync(PROGRAM_SO_PATH)) {
-      console.log(PROGRAM_SO_PATH)
-      throw new Error(
-        'Program needs to be deployed with `solana program deploy target/deploy/chainlink_solana_demo.so --keypair solana-wallet/keypair.json`',
-      )
-    } else {
-      throw new Error('Program needs to be built and deployed')
-    }
-  }
-  console.log(`Using program ${programId.toBase58()}`)
+  // const programInfo = await connection.getAccountInfo(programId)
+  const programInfo = null;
 
+  if (programInfo === null) {
+
+  }
 
   // Derive the address (public key) of a greeting account from the program so that it's easy to find later.
   const GREETING_SEED = 'hello'
-  readingPubkey = await PublicKey.createWithSeed(
-    payer.publicKey,
-    GREETING_SEED,
-    programId,
-  )
+  // await PublicKey.createWithSeed(
+  //   payer.publicKey,
+  //   GREETING_SEED,
+  //   programId,
+  // )
 
   // Check if the greeting account has already been created
-  const priceFeedAccount = await connection.getAccountInfo(readingPubkey)
-  if (priceFeedAccount === null) {
-    console.log(
-      'Creating account',
-      readingPubkey.toBase58(),
-      'to read from',
-    )
-    const lamports = await connection.getMinimumBalanceForRentExemption(
-      AGGREGATOR_SIZE,
-    )
+  // const priceFeedAccount = await connection.getAccountInfo(readingPubkey)
+  // if (priceFeedAccount === null) {
+  //   console.log(
+  //     'Creating account',
+  //     readingPubkey.toBase58(),
+  //     'to read from',
+  //   )
+  // const lamports = await connection.getMinimumBalanceForRentExemption(
+  //   AGGREGATOR_SIZE,
+  // )
 
-    const transaction = new Transaction().add(
-      SystemProgram.createAccountWithSeed({
-        fromPubkey: payer.publicKey,
-        basePubkey: payer.publicKey,
-        seed: GREETING_SEED,
-        newAccountPubkey: readingPubkey,
-        lamports,
-        space: AGGREGATOR_SIZE,
-        programId,
-      }),
-    )
-    await sendAndConfirmTransaction(connection, transaction, [payer])
-  }
+  // const transaction = new Transaction().add(
+  //   SystemProgram.createAccountWithSeed({
+  //     fromPubkey: payer.publicKey,
+  //     basePubkey: payer.publicKey,
+  //     seed: GREETING_SEED,
+  //     newAccountPubkey: readingPubkey,
+  //     lamports,
+  //     space: AGGREGATOR_SIZE,
+  //     programId,
+  //   }),
+  // )
+  // await sendAndConfirmTransaction(connection, transaction, [payer])
 }
+
 
 class AggregatorAccount {
   answer = 0;
@@ -202,7 +195,7 @@ const AGGREGATOR_SIZE = borsh.serialize(
  * Gets the price from our account
  */
 export async function getPrice(): Promise<void> {
-  console.log('Getting data from ', readingPubkey.toBase58())
+  //console.log('Getting data from ', readingPubkey.toBase58())
   const priceFeedAccount = "FmAmfoyPXiA8Vhhe6MZTr3U6rZfEZ1ctEHay1ysqCqcf"
   const AggregatorPublicKey = new PublicKey(priceFeedAccount)
   const instruction = new TransactionInstruction({
@@ -211,11 +204,11 @@ export async function getPrice(): Promise<void> {
     programId,
     data: Buffer.alloc(0), // All instructions are hellos
   })
-  await sendAndConfirmTransaction(
-    connection,
-    new Transaction().add(instruction),
-    [payer],
-  )
+  // await sendAndConfirmTransaction(
+  //   connection,
+  //   new Transaction().add(instruction),
+  //   [payer],
+  // )
 }
 // $72.121164780
 

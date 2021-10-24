@@ -10,7 +10,7 @@ import {
     establishPayer,
     reportPrice,
     getPrice
-} from './client/src/hello_world';
+} from './client/src/solanalinkchain';
 
 import './Donate.css';
 import { useHistory } from 'react-router-dom';
