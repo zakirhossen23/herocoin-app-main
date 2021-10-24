@@ -7,7 +7,6 @@ import { useState } from "react";
 
 import './Register.css';
 import { useHistory } from "react-router";
-
 export function Register() {
     const history = useHistory();
     const [phoneNumber, setPhoneNumber] = useState<string>('');

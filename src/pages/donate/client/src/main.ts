@@ -1,40 +1,28 @@
-/**
- * Hello world
- */
-
 import {
   establishConnection,
   checkProgram,
   establishPayer,
   reportPrice,
   getPrice
-} from './hello_world'
+} from './hello_world';
 
-async function main() {
+export function main2() {
+
   console.log("Let's work with Chainlink and Solana...")
 
   // Establish connection to the cluster
-  await establishConnection()
+  establishConnection()
 
   // Determine who pays for the fees
-  await establishPayer()
+  establishPayer()
 
   // Check if the program has been deployed
-  await checkProgram()
+  checkProgram()
 
   // Make a transaction to get price
-  await getPrice()
+  getPrice()
 
   // Find out how many times that account has been greeted
-  await reportPrice()
+  reportPrice()
 
-  console.log('Success')
 }
-
-main().then(
-  () => process.exit(),
-  err => {
-    console.error(err)
-    process.exit(-1)
-  },
-)

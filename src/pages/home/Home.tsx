@@ -1,3 +1,4 @@
+
 import Top from '../../assets/top_2.svg';
 import Tabbar from '../../assets/tabbar.svg';
 import './Home.css';
@@ -9,11 +10,10 @@ export function Home() {
 
     return (
         <div className="page home">
-             <img className="top" src={Top} />
-             <div onClick={() => history.push("/cards")} className="action">Make a donation</div>
-             <span className="spacer"></span>
-             <img className="tabbar" src={Tabbar} />
+            <img className="top" src={Top} />
+            <div onClick={() => history.push("/cards")} className="action">Make a donation</div>
+            <span className="spacer"></span>
+            <img className="tabbar" src={Tabbar} />
         </div>
     );
 }
-  
