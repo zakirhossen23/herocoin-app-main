@@ -1,0 +1,6 @@
+{
+	"appId": "com.herocoin.app",
+	"appName": "herocoin",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
