@@ -35,7 +35,6 @@
     cursor: pointer;
 }
 
-
 .cards-three .container {
     background: #FFFFFF;
     flex: 1;
@@ -63,4 +62,50 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
+}
+
+.place {
+    width: 94%;
+    height: 65%;
+    border: 1px solid RGB(241, 243, 246);
+    border-radius: 30px;
+    background: RGB(241, 243, 246);
+    margin: 0 3%;
+}
+
+.addressplace {
+    padding: 0px 0px 0px 18px;
+}
+
+.change {
+    color: green;
+    text-decoration: none;
+}
+
+.header img {
+    width: 10%;
+    height: 10%;
+    right: 0px;
+    float: right;
+    margin: -51px 0px 0px 0px;
+}
+
+.paymenticon {
+    width: 34%;
+    height: 34%;
+    padding-right: 10%;
+}
+
+.containingpayment {
+    display: flex;
+}
+
+.cardname {
+    margin: 0;
+}
+
+.hidden {
+    font-size: 22px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
