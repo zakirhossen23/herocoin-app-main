@@ -2,8 +2,9 @@ import Bottom from '../../assets/bottom_1.svg';
 import Arrow from '../../assets/arrow.svg';
 import './Welcome.css';
 import { useHistory } from 'react-router-dom';
+import { users } from '../auth/savedvariable';
 
-export function Welcome({name} : {name: string}) {
+export function Welcome() {
     let history = useHistory();
 
 
@@ -11,22 +12,19 @@ export function Welcome({name} : {name: string}) {
         <div className="page welcome">
             <div className="top">
                 <div className="welcome">Welcome</div>
-                <div className="name">{name}</div>
+                <div className="name">{users.firstname}</div>
             </div>
             <div className="bottom">
-                <img className="bottom-background" src={Bottom} />
+                df           <img className="bottom-background" src={Bottom} />
                 <div onClick={() => {
-                    if(name.toLowerCase() == "shara") {
-                        history.push("/home/app")
-                    }else {
-                        history.push("/home")
-                    }
+
+                    history.push("/home")
+
                 }} className="button">
                     <div>Start</div>
-                    <img style={{height: '20px', marginLeft: '8px'}} src={Arrow}/>
+                    <img style={{ height: '20px', marginLeft: '8px' }} src={Arrow} />
                 </div>
             </div>
         </div>
     );
 }
-  

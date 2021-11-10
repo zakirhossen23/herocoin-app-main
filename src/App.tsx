@@ -32,89 +32,97 @@ import { Cart } from './pages/cart/Cart';
 import { Location } from './pages/location/Location';
 import { Accept } from './pages/accept/Accept';
 import { Ticket } from './pages/ticket/Ticket';
+import { Lottery } from './pages/Lottery/lottery';
+import { Name } from './pages/auth/name/name';
 
 function App() {
   return (
     <Router>
       <Switch>
-          <Route exact path="/password">
-            <Password />
-          </Route>
-          <Route exact path="/register">
-            <Register />
-          </Route>
-          <Route exact path="/verify">
-            <Verification />
-          </Route>
-          <Route exact path="/welcome/eliy">
-            <Welcome name="Eliy" />
-          </Route>
-          <Route exact path="/welcome/shara">
-            <Welcome name="Shara"/>
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/home/app">
-            <HomeApp />
-          </Route>
-          <Route exact path="/order">
-            <Order />
-          </Route>
-          <Route exact path="/order/accept">
-            <Accept />
-          </Route>
-          <Route exact path="/ticket">
-            <Ticket />
-          </Route>
-          <Route exact path="/prescription">
-            <Prescription />
-          </Route>
-          <Route exact path="/explanation">
-            <Explanation />
-          </Route>
-          <Route exact path="/cart">
-            <Cart />
-          </Route>
-          <Route exact path="/location">
-            <Location />
-          </Route>
-          <Route exact path="/date">
-            <Date />
-          </Route>
-          <Route exact path="/time">
-            <Time />
-          </Route>
-          <Route exact path="/doctors">
-            <Doctors />
-          </Route>
-          <Route exact path="/cards">
-            <Cards />
-          </Route>
-          <Route path="/cards/1">
-            <CardsOne />
-          </Route>
-          <Route path="/cards/2">
-            <CardsTwo />
-          </Route>
-          <Route path="/cards/3">
-            <CardsThree />
-          </Route>
-          <Route path="/donate">
-            <Donate />
-          </Route>
-          <Route path="/thank-you">
-            <ThankYou />
-          </Route>
-          <Route path="/stories">
-            <Stories />
-          </Route>
-          <Route path="/app">
-            <Redirect to="/?context=app"/>
-          </Route>
-          <Route exact path="/">
-            <Splash />
-          </Route>
+        <Route exact path="/password">
+          <Password />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <Route exact path="/verify">
+          <Verification />
+        </Route>
+        <Route exact path="/name">
+          <Name />
+        </Route>
+        <Route exact path="/welcome">
+          <Welcome />
+        </Route>
+
+        <Route exact path="/home">
+          <Home />
+        </Route>
+        <Route exact path="/home/app">
+          <HomeApp />
+        </Route>
+        <Route exact path="/order">
+          <Order />
+        </Route>
+        <Route exact path="/order/accept">
+          <Accept />
+        </Route>
+        <Route exact path="/ticket">
+          <Ticket />
+        </Route>
+        <Route exact path="/prescription">
+          <Prescription />
+        </Route>
+        <Route exact path="/explanation">
+          <Explanation />
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
+        <Route exact path="/location">
+          <Location />
+        </Route>
+        <Route exact path="/date">
+          <Date />
+        </Route>
+        <Route exact path="/time">
+          <Time />
+        </Route>
+        <Route exact path="/doctors">
+          <Doctors />
+        </Route>
+        <Route exact path="/cards">
+          <Cards />
+        </Route>
+        <Route path="/cards/1">
+          <CardsOne />
+        </Route>
+        <Route path="/cards/2">
+          <CardsTwo />
+        </Route>
+        <Route path="/cards/3">
+          <CardsThree />
+        </Route>
+        <Route path="/donate">
+          <Donate />
+        </Route>
+        <Route path="/lottery">
+          <Lottery />
+        </Route>
+
+        <Route path="/thank-you">
+          <ThankYou />
+        </Route>
+
+        <Route path="/stories">
+          <Stories />
+        </Route>
+        <Route path="/app">
+          <Redirect to="/?context=app" />
+        </Route>
+        <Route exact path="/">
+          <Splash />
+        </Route>
       </Switch>
     </Router>
   );
