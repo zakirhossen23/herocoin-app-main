@@ -1,0 +1,44 @@
+.taskbarstyle {
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    height: 15%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.homeiconplace {
+    width: 33%;
+    overflow: hidden;
+}
+
+.insightplace {
+    width: 33%;
+    overflow: hidden;
+}
+
+.donateiconplace {
+    width: 33%;
+    overflow: hidden;
+}
+
+.homeiconplaceimg {
+    text-align: center;
+    height: 62%;
+    width: 48%;
+    margin: 18px 0px 0px 54px;
+}
+
+.insightplaceimg {
+    text-align: center;
+    height: 200%;
+    width: 200%;
+    margin: -55px 0px 0px -78px;
+}
+
+.donateiconplaceimg {
+    height: 200%;
+    width: 200%;
+    margin: -52px 0px 0px -62px;
+    text-align: center;
+}
