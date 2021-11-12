@@ -44,7 +44,7 @@ export function Donate() {
                 </div>
                 <img onClick={() => {
                     main2()
-                    history.push("/thank-you")
+                    history.push("/lottery")
                 }} className="button" src={DonateButton} />
                 <span className="spacer"></span>
                 <img src={Tabbar} />
