@@ -8,7 +8,7 @@ import {
 
 export function main2() {
 
-  console.log("Let's work with Chainlink and Solana...")
+  console.log("Chainlink")
 
   // // Establish connection to the cluster
   establishConnection()

@@ -34,6 +34,7 @@ import { Accept } from './pages/accept/Accept';
 import { Ticket } from './pages/ticket/Ticket';
 import { Lottery } from './pages/Lottery/lottery';
 import { Name } from './pages/auth/name/name';
+import { DonateBlockchain } from './pages/donate/donateblockchain/donateblockchain';
 
 function App() {
   return (
@@ -105,6 +106,9 @@ function App() {
         </Route>
         <Route path="/donate">
           <Donate />
+        </Route>
+        <Route path="/donateblockchain">
+          <DonateBlockchain />
         </Route>
         <Route path="/lottery">
           <Lottery />
