@@ -9,6 +9,7 @@ export function Cards() {
     return (
         <div className="page cards">
             <div className="top">
+
                 <img src={MenuTop} />
             </div>
             <div className="container">

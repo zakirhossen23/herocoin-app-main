@@ -7,20 +7,26 @@ import insighticon from './stuff/insighticon.svg';
 import './stuff/taskbar.css';
 export function Lottery() {
     let history = useHistory();
+
     const updateTimer: any = setInterval(() => {
-        var future = Date.parse("Dec 12, 2021 01:30:00");
-        var now = new Date();
-        const diff = (future - now.getTime());
+        // Get current date and time
+        var today = new Date();
 
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(diff / (1000 * 60 * 60));
-        var mins = Math.floor(diff / (1000 * 60));
-        var secs = Math.floor(diff / 1000);
+        // Get number of days to Friday
+        var dayNum = today.getDay();
+        var daysToFri = 5 - (dayNum < 5 ? dayNum : dayNum - 7);
 
-        var d = days;
-        var h = hours - days * 24;
-        var m = mins - hours * 60;
-        var s = secs - mins * 60;
+        // Get milliseconds to noon friday
+        var fridayNoon = new Date(+today);
+        fridayNoon.setDate(fridayNoon.getDate() + daysToFri);
+        fridayNoon.setHours(12, 0, 0, 0);
+        // Round up ms remaining so seconds remaining matches clock
+        var ms = Math.ceil((fridayNoon.getTime() - today.getTime()) / 1000) * 1000;
+        var d = ms / 8.64e7 | 0;
+        var h = (ms % 8.64e7) / 3.6e6 | 0;
+        var m = (ms % 3.6e6) / 6e4 | 0;
+        var s = (ms % 6e4) / 1e3 | 0;
+
         var dayelement = document.getElementById("day");
         var hourelement = document.getElementById("hour");
         var minuteelement = document.getElementById("minute");

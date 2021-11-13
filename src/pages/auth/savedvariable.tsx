@@ -15,3 +15,12 @@ export const Payments = {
     expirydate: "",
     cvv: ""
 }
+export const gotnumbers = {
+    first: Math.floor(Math.random() * 100) + 1,
+    second: Math.floor(Math.random() * 100) + 1,
+    third: Math.floor(Math.random() * 100) + 1,
+    fourth: Math.floor(Math.random() * 100) + 1,
+    five: Math.floor(Math.random() * 100) + 1,
+    six: Math.floor(Math.random() * 100) + 1,
+    seven: Math.floor(Math.random() * 100) + 1,
+}

@@ -171,7 +171,7 @@ export function Donate() {
                 </div>
                 <img onClick={async () => {
 
-                    { document.getElementsByClassName("title")[0].innerHTML = "Loading..."; await blockchain() }
+
                     main2()
                     history.push("/lottery")
                 }} className="button" src={DonateButton} />

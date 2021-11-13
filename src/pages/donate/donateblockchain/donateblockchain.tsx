@@ -94,7 +94,7 @@ export function DonateBlockchain() {
                 <img onClick={() => {
 
                     if (send_token() === true) {
-                        history.push("/lottery")
+                        history.push("/thank-you")
                     } else {
                         (document.getElementById("status") as HTMLElement).innerHTML = "Please input valid Information!";
                     }
