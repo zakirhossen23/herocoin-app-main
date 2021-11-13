@@ -10,13 +10,12 @@ export function Ticket() {
     return (
         <div className="page ticket">
             <div className="top">
-                <img onClick={() => history.goBack()} src={BackButton}/>
+                <img onClick={() => history.goBack()} src={BackButton} />
             </div>
-            <img onClick={() => history.push("/ticket")} className="content" src={TicketSvg}/>
+            <img onClick={() => history.push("/ticket")} className="content" src={TicketSvg} />
             <span className="spacer"></span>
-            <div className="footer-button">Finish and save as picture</div> 
-            <div className="footer-button">Finish</div> 
+            <div className="footer-button">Finish and save as picture</div>
+            <div className="footer-button" onClick={() => history.push("/home")} >Finish</div>
         </div>
     );
 }
-  

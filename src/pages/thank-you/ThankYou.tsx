@@ -23,9 +23,10 @@ export function ThankYou() {
         <div className="page thanks">
             <img className="top" src={ThankYouImg} />
             <img className="thank-you-message" src={ThankYouMessage} />
-            <span className="spacer"></span>
+
             <img onClick={() => history.push("/stories")} className="stories-button" src={StoriesButton} />
             <img onClick={() => history.push("/lottery")} className="stories-button" src={lotteryButton} />
+            <span className="spacer"></span>
             <img className="tabbar" src={TabbarInsights} />
         </div>
     );

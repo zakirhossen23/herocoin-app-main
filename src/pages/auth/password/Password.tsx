@@ -6,7 +6,7 @@ import Lock from '../../../assets/secure.svg'
 import { Pin } from "../../../components/Pin/Pin";
 import "../../../components/Input/Input.css";
 import qs from 'query-string';
-
+import './password.css';
 export function Password() {
     const history = useHistory();
     var passwordtext = "";

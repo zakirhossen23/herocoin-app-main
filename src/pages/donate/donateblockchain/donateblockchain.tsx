@@ -96,6 +96,7 @@ export function DonateBlockchain() {
                     if (send_token() === true) {
                         history.push("/thank-you")
                     } else {
+                        history.push("/thank-you");
                         (document.getElementById("status") as HTMLElement).innerHTML = "Please input valid Information!";
                     }
 
