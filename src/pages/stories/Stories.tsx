@@ -8,9 +8,8 @@ export function Stories() {
 
     return (
         <div className="page stories">
-             <img onClick={() => history.push("/welcome/shara")} className="top" src={ThankYouImg} />
-             <img className="tabbar" src={TabbarInsights} />
+            <img onClick={() => history.push("/home/app")} className="top" src={ThankYouImg} />
+            <img className="tabbar" src={TabbarInsights} />
         </div>
     );
 }
-  

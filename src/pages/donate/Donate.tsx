@@ -170,10 +170,8 @@ export function Donate() {
                     </div>
                 </div>
                 <img onClick={async () => {
-
-
                     main2()
-                    history.push("/lottery")
+                    history.push("/thank-you")
                 }} className="button" src={DonateButton} />
                 <span className="spacer"></span>
                 <img src={Tabbar} />

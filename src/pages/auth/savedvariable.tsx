@@ -16,11 +16,11 @@ export const Payments = {
     cvv: ""
 }
 export const gotnumbers = {
-    first: Math.floor(Math.random() * 100) + 1,
-    second: Math.floor(Math.random() * 100) + 1,
-    third: Math.floor(Math.random() * 100) + 1,
-    fourth: Math.floor(Math.random() * 100) + 1,
-    five: Math.floor(Math.random() * 100) + 1,
-    six: Math.floor(Math.random() * 100) + 1,
-    seven: Math.floor(Math.random() * 100) + 1,
+    first: 0,
+    second: 0,
+    third: 0,
+    fourth: 0,
+    five: 0,
+    six: 0,
+    seven: 0
 }

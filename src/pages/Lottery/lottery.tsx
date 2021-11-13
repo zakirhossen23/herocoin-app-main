@@ -5,6 +5,7 @@ import homeicon from './stuff/homeicon.png';
 import donateicon from './stuff/donateicon.svg';
 import insighticon from './stuff/insighticon.svg';
 import './stuff/taskbar.css';
+import { gotnumbers } from '../auth/savedvariable';
 export function Lottery() {
     let history = useHistory();
 
@@ -63,19 +64,19 @@ export function Lottery() {
             </div>
 
             <div className='gotnumbers'>
-                <p className='eachnummber'>23</p>
-                <p className='eachnummber'>34</p>
-                <p className='eachnummber'>64</p>
-                <p className='eachnummber'>34</p>
-                <p className='eachnummber'>98</p>
-                <p className='eachnummber'>12</p>
-                <p className='eachnummber'>56</p>
+                <p className='eachnummber'>{gotnumbers.first}</p>
+                <p className='eachnummber'>{gotnumbers.second}</p>
+                <p className='eachnummber'>{gotnumbers.third}</p>
+                <p className='eachnummber'>{gotnumbers.fourth}</p>
+                <p className='eachnummber'>{gotnumbers.five}</p>
+                <p className='eachnummber'>{gotnumbers.six}</p>
+                <p className='eachnummber'>{gotnumbers.seven}</p>
             </div>
             <div className="taskbarstyle">
                 <div className='homeiconplace' onClick={() => history.push("/home")}>
                     <img id='home' className='homeiconplaceimg' src={homeicon}></img>
                 </div>
-                <div className='donateiconplace' onClick={() => history.push("/donate")} >
+                <div className='donateiconplace' onClick={() => history.push("/cards")} >
                     <img id='donate' className='donateiconplaceimg' src={donateicon}></img>
                 </div>
                 <div className='insightplace' onClick={() => history.push("/stories")} >

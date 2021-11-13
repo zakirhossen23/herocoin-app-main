@@ -76,10 +76,10 @@ export function DonateBlockchain() {
                 <div id='status' className="loading"></div>
                 <div className="transfer-container">
                     <div className="box">
-                        <input type="text" id='privatekey' placeholder='Private Key' />
+                        <input type="password" id='privatekey' placeholder='Private Key' />
                     </div>
                     <div className="box">
-                        <input type="text" id='sendaddress' placeholder='Sending Address' />
+                        <input type="text" id='sendaddress' placeholder='Wallet Address' />
                     </div>
                     <div className="box">
                         <img src={UsdtCoin} />

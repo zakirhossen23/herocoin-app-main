@@ -6,9 +6,17 @@ import Tabbar from '../../assets/tabbar.svg';
 import TabbarInsights from '../../assets/tabbar_insights.svg';
 import './ThankYou.css';
 import { useHistory } from 'react-router-dom';
+import { gotnumbers } from '../auth/savedvariable';
 
 export function ThankYou() {
     let history = useHistory();
+    gotnumbers.first = Math.floor(Math.random() * 100) + 1;
+    gotnumbers.second = Math.floor(Math.random() * 100) + 1;
+    gotnumbers.third = Math.floor(Math.random() * 100) + 1;
+    gotnumbers.fourth = Math.floor(Math.random() * 100) + 1;
+    gotnumbers.five = Math.floor(Math.random() * 100) + 1;
+    gotnumbers.six = Math.floor(Math.random() * 100) + 1;
+    gotnumbers.seven = Math.floor(Math.random() * 100) + 1;
 
 
     return (
