@@ -1,13 +1,29 @@
 import { useHistory } from 'react-router-dom';
+import MenuTop from '../../assets/menu_top.svg';
 import HomeImg from '../../assets/home.png';
 import './lottery.css';
-import homeicon from './stuff/homeicon.png';
-import donateicon from './stuff/donateicon.svg';
-import insighticon from './stuff/insighticon.svg';
 import './stuff/taskbar.css';
+import Tabbar from '../../assets/tabbar_insights.svg';
 import { gotnumbers } from '../auth/savedvariable';
+import { allstorednumbers } from '../auth/savedvariable';
 export function Lottery() {
     let history = useHistory();
+    const createall: any = setInterval(() => {
+        var getelement = document.getElementById("ticketslist") as HTMLElement;
+        var getelement2 = document.getElementsByClassName("tickect");
+
+        try {
+            if (getelement2.length === 0) {
+                allstorednumbers.forEach(element => {
+
+                    getelement.innerHTML = getelement.innerHTML + '<div class="tickect"><p>' + element.toString() + '</p></div>';
+
+                });
+            }
+        } catch (error) { }
+
+
+    }, 1000);
 
     const updateTimer: any = setInterval(() => {
         // Get current date and time
@@ -43,25 +59,17 @@ export function Lottery() {
     return (
 
         <div className="home">
-            <img className="homeimg" src={HomeImg} />
+
+            <img src={HomeImg} className="homeimg" />
             <div className='countnumbers'>
                 <p className='countnummber' id='day'>0</p>
                 <p className='countnummber' id='hour'>0</p>
                 <p className='countnummber' id='minute'>0</p>
                 <p className='countnummber' id='second'>0</p>
+                <p className='countnummber' id='second'>0</p>
 
             </div>
 
-            <div className='winnernumbers'>
-                <p className='winnummber'>23</p>
-                <p className='winnummber'>34</p>
-                <p className='winnummber'>64</p>
-                <p className='winnummber'>34</p>
-                <p className='winnummber'>98</p>
-                <p className='winnummber'>12</p>
-                <p className='winnummber'>56</p>
-
-            </div>
 
             <div className='gotnumbers'>
                 <p className='eachnummber'>{gotnumbers.first}</p>
@@ -69,24 +77,21 @@ export function Lottery() {
                 <p className='eachnummber'>{gotnumbers.third}</p>
                 <p className='eachnummber'>{gotnumbers.fourth}</p>
                 <p className='eachnummber'>{gotnumbers.five}</p>
-                <p className='eachnummber'>{gotnumbers.six}</p>
-                <p className='eachnummber'>{gotnumbers.seven}</p>
-            </div>
-            <div className="taskbarstyle">
-                <div className='homeiconplace' onClick={() => history.push("/home")}>
-                    <img id='home' className='homeiconplaceimg' src={homeicon}></img>
-                </div>
-                <div className='donateiconplace' onClick={() => history.push("/cards")} >
-                    <img id='donate' className='donateiconplaceimg' src={donateicon}></img>
-                </div>
-                <div className='insightplace' onClick={() => history.push("/stories")} >
-                    <img id='insight' className='insightplaceimg' src={insighticon}></img>
-                </div>
 
             </div>
+
+            <div className='ticketsnumbers'>
+                <p id='ticketslist'></p>
+
+
+            </div>
+            <div hidden>  {createall}</div>
+            <div >
+                <img className='taskbar' src={Tabbar} />
+            </div>
+
         </div>
 
     );
-
 
 }

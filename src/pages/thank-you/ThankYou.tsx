@@ -15,8 +15,6 @@ export function ThankYou() {
     gotnumbers.third = Math.floor(Math.random() * 100) + 1;
     gotnumbers.fourth = Math.floor(Math.random() * 100) + 1;
     gotnumbers.five = Math.floor(Math.random() * 100) + 1;
-    gotnumbers.six = Math.floor(Math.random() * 100) + 1;
-    gotnumbers.seven = Math.floor(Math.random() * 100) + 1;
 
 
     return (
