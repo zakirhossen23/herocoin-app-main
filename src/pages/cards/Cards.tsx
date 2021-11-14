@@ -13,8 +13,8 @@ export function Cards() {
                 <img src={MenuTop} />
             </div>
             <div className="container">
-                <div onClick={() => history.push("/cards/1")} className="action">Connect card</div>
-                <div onClick={() => history.push("/donateblockchain")} className="action">Pay via Crypto wallet</div>
+                <div onClick={() => history.push("/cards/1")} className="action">Connect card (Chainlink)</div>
+                <div onClick={() => history.push("/donateblockchain")} className="action">Pay via OKEx wallet</div>
 
             </div>
 

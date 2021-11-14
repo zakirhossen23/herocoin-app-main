@@ -72,7 +72,7 @@ export function DonateBlockchain() {
                 <img src={MenuTop} />
             </div>
             <div className="container">
-                <div className="title">Donate by Crypto wallet</div>
+                <div className="title">Donate by OKEx wallet</div>
                 <div id='status' className="loading"></div>
                 <div className="transfer-container">
                     <div className="box">

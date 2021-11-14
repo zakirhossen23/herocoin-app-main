@@ -6,8 +6,6 @@ import { useHistory } from 'react-router-dom';
 
 export function Home() {
     let history = useHistory();
-
-
     return (
         <div className="page home">
             <img className="top" src={Top} />
