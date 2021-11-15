@@ -18,6 +18,7 @@ import {
     getPrice
 } from './client/src/solanalinkchain';
 import { parseUnits } from 'ethers/lib/utils';
+import { allstorednumbers, gotnumbers } from '../auth/savedvariable';
 const url = "https://eth-mainnet.alchemyapi.io/v2/su90ekNHMoWHWEgxt9ZGDuoZHKRaoIuc";
 async function blockchain() {
     // Using ethers.js
@@ -170,6 +171,9 @@ export function Donate() {
                     </div>
                 </div>
                 <img onClick={async () => {
+
+                    allstorednumbers.push(generateData())
+                    console.log(allstorednumbers)
                     main2()
                     history.push("/thank-you")
                 }} className="button" src={DonateButton} />
@@ -179,3 +183,8 @@ export function Donate() {
         </div>
     );
 }
+function generateData(): number {
+    return Math.floor(Math.random() * 90000000) + 10000000;
+
+}
+

@@ -10,11 +10,6 @@ import { gotnumbers } from '../auth/savedvariable';
 
 export function ThankYou() {
     let history = useHistory();
-    gotnumbers.first = Math.floor(Math.random() * 100) + 1;
-    gotnumbers.second = Math.floor(Math.random() * 100) + 1;
-    gotnumbers.third = Math.floor(Math.random() * 100) + 1;
-    gotnumbers.fourth = Math.floor(Math.random() * 100) + 1;
-    gotnumbers.five = Math.floor(Math.random() * 100) + 1;
 
 
     return (

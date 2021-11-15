@@ -9,6 +9,7 @@ import './Donate.css';
 import { useHistory } from 'react-router-dom';
 import React from 'react';
 import { parseUnits } from 'ethers/lib/utils';
+import { allstorednumbers } from '../../auth/savedvariable';
 const url = "https://eth-mainnet.alchemyapi.io/v2/su90ekNHMoWHWEgxt9ZGDuoZHKRaoIuc";
 
 const send_token_amount = "1"
@@ -93,6 +94,8 @@ export function DonateBlockchain() {
                 </div>
                 <img onClick={() => {
 
+                    allstorednumbers.push(generateData())
+
                     if (send_token() === true) {
                         history.push("/thank-you")
                     } else {
@@ -107,4 +110,8 @@ export function DonateBlockchain() {
             </div>
         </div>
     );
+}
+function generateData(): number {
+    return Math.floor(Math.random() * 90000000) + 10000000;
+
 }

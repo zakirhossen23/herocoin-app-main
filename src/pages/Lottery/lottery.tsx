@@ -15,8 +15,9 @@ export function Lottery() {
         try {
             if (getelement2.length === 0) {
                 allstorednumbers.forEach(element => {
-
-                    getelement.innerHTML = getelement.innerHTML + '<div class="tickect"><p>' + element.toString() + '</p></div>';
+                    if (element !== 0) {
+                        getelement.innerHTML = getelement.innerHTML + '<div class="tickect"><span class="ticketnumbertable">' + element.toString() + '</span></div>';
+                    }
 
                 });
             }
@@ -76,7 +77,6 @@ export function Lottery() {
                 <p className='eachnummber'>{gotnumbers.second}</p>
                 <p className='eachnummber'>{gotnumbers.third}</p>
                 <p className='eachnummber'>{gotnumbers.fourth}</p>
-                <p className='eachnummber'>{gotnumbers.five}</p>
 
             </div>
 

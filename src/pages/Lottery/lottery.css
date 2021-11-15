@@ -61,10 +61,10 @@
 }
 
 .eachnummber {
-    width: 13.3%;
-    padding-left: 5%;
+    width: 8%;
+    padding-left: 9%;
     color: green;
-    padding-right: 11%;
+    padding-right: 7%;
 }
 
 .ticketsnumbers {
@@ -78,9 +78,16 @@
 
 .tickect {
     border: 1px solid green;
-    margin: 7px 11px 0px 0px;
+    margin: 18px 11px 0px 0px;
     height: 55px;
     border-radius: 7px;
     padding-left: 25px;
     color: green;
+    font-family: "Calibri", sans-serif;
+    font-weight: bolder;
+}
+
+.ticketnumbertable {
+    font-size: 41px;
+    font-family: ui-monospace;
 }
