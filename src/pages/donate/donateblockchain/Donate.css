@@ -150,3 +150,7 @@
     margin: 0;
     text-overflow: ellipsis;
 }
+
+.celo {
+    width: 144px;
+}

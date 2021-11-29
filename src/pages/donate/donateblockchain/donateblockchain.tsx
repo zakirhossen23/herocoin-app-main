@@ -1,7 +1,7 @@
 import MenuTop from '../../../assets/menu_top_wallet.svg';
 import Tabbar from '../../../assets/tabbar.svg';
 import To from '../../../assets/to.svg';
-import Coin from '../../../assets/celocoin.png';
+import CeloCoin from '../../../assets/celo_coin.svg';
 import HeroCoin from '../../../assets/hero_coin.svg';
 import DonateButton from '../../../assets/donate_button.svg';
 import './Donate.css';
@@ -11,12 +11,9 @@ import { ChainId, NetworkNames } from '@celo-tools/use-contractkit';
 import { useContractKit as UseContractKit } from '@celo-tools/use-contractkit';
 import { ContractKitProvider } from '@celo-tools/use-contractkit';
 import App from '../../../App';
+
 import Web3 from "web3";
 
-function WrappedApp() {
-    console.log("clicked")
-
-}
 export function DonateBlockchain() {
     const output = React.createRef<HTMLInputElement>();
     let history = useHistory();
@@ -26,7 +23,7 @@ export function DonateBlockchain() {
     async function connecting() {
         var statusp = (document.getElementById("statusof") as HTMLParagraphElement)
         try {
-           
+
             //Example Private key 0x1ac9a52f7e38bac58e3a6ec55eb74140b73f61a3fc081bb546a5171ebca98e13
 
             const web3 = new Web3("https://alfajores-forno.celo-testnet.org")
@@ -61,7 +58,7 @@ export function DonateBlockchain() {
             history.push("/thank-you")
         } catch (e) {
             statusp.innerHTML = "Failed! Please try again."
-            
+
         }
 
 
@@ -80,14 +77,22 @@ export function DonateBlockchain() {
                         <input type="password" id='privatekey' placeholder='Private Key' />
                     </div>
 
+                    <div>
                     <div className="box">
-                        <img className='imageicon' src={Coin} />
+                        <img src={CeloCoin} />
                         <input type="number" onChange={e => {
                             if (output.current) {
-                                output.current.value = e.target.value
+                                output.current.value = String( Number(e.target.value) * Number(3.34))
                             }
                         }} />
                     </div>
+                    <img className="icon" src={To} />
+                    <div className="box">
+                        <img src={HeroCoin} />
+                        <input ref={output} type="number" />
+                    </div>
+                </div>
+
                     <div className="box">
                         <div className='statusbox'>
                             <p className='statustext' id='statusof'>Status</p>
