@@ -32,9 +32,10 @@ import { Cart } from './pages/cart/Cart';
 import { Location } from './pages/location/Location';
 import { Accept } from './pages/accept/Accept';
 import { Ticket } from './pages/ticket/Ticket';
-import { Lottery } from './pages/Lottery/lottery';
+
 import { Name } from './pages/auth/name/name';
 import { DonateBlockchain } from './pages/donate/donateblockchain/donateblockchain';
+import { NFT } from './pages/nft/NFT';
 
 function App() {
   return (
@@ -110,14 +111,14 @@ function App() {
         <Route path="/donateblockchain">
           <DonateBlockchain />
         </Route>
-        <Route path="/lottery">
-          <Lottery />
-        </Route>
+ 
 
         <Route path="/thank-you">
           <ThankYou />
         </Route>
-
+        <Route path="/NFT">
+          <NFT />
+        </Route>
         <Route path="/stories">
           <Stories />
         </Route>

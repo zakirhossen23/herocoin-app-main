@@ -43,3 +43,15 @@
     cursor: pointer;
     margin-top: 20px;
 }
+
+.nfttext {
+    vertical-align: middle;
+    margin: 37px;
+    margin-left: 171px;
+    margin-right: 0px;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+}
+
+.nftdiv {}
