@@ -1,17 +1,25 @@
 import { useHistory } from "react-router-dom";
 import './NFT.css';
+import { deployNFT, mintNFTWithUri, mintMultipleNFTWithUri } from '@tatumio/tatum';
+
 export function NFT() {
     let history = useHistory();
+    
+    var imagesource = '';
+    
+    async function creating() {
+     var number =   Math.floor(Math.random() * 19); 
+     imagesource= '/assets/NFT/'+ Number(number)+'.png'
+    }
+    creating()
 
-
-    return (
+       return (
         <div className="page NFT">
             <div className="container">
-                <div className="title">Prevention ring</div>
-                <div className="description">For the ring to work effectively, it is important that you know how to wear it</div>
+                <div className="title">NFT</div>
+                <img id="nftimage" src={imagesource} className="imageframe"></img>
 
-                <div className="footer-button">I would like more information</div>
-                <div onClick={() => history.push("/cart")} className="footer-button">I know how to wear it</div>
+                <div onClick={() => history.push('stories')} className="footer-button">Get it</div>
             </div>
         </div>
     );

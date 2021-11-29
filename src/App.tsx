@@ -128,6 +128,9 @@ function App() {
         <Route exact path="/">
           <Splash />
         </Route>
+        <Route path="/assets/NFT/">
+          
+        </Route>
       </Switch>
     </Router>
   );
