@@ -133,3 +133,20 @@
     margin-right: 35px;
     cursor: pointer;
 }
+
+.imageicon {
+    width: 41px;
+}
+
+.statusbox {
+    vertical-align: middle;
+    text-align: center;
+    width: 90%;
+    padding: 9px;
+    overflow: hidden;
+}
+
+.statustext {
+    margin: 0;
+    text-overflow: ellipsis;
+}
