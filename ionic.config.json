@@ -1,0 +1,7 @@
+{
+  "name": "heracoin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

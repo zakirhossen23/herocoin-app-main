@@ -1,4 +1,4 @@
-package com.herocoin.app;
+package io.ionic.heracoin;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -1,6 +1,7 @@
 {
-	"appId": "com.herocoin.app",
-	"appName": "herocoin",
+	"appId": "io.ionic.heracoin",
+	"appName": "heracoin",
+	"npmClient": "npm",
 	"webDir": "build",
-	"bundledWebRuntime": false
+	"cordova": {}
 }

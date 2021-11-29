@@ -1,0 +1,7 @@
+{
+    "appId": "io.ionic.heracoin",
+    "appName": "heracoin",
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+}

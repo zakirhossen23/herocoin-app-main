@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">herocoin</string>
-    <string name="title_activity_main">herocoin</string>
-    <string name="package_name">com.herocoin.app</string>
-    <string name="custom_url_scheme">com.herocoin.app</string>
+    <string name="app_name">heracoin</string>
+    <string name="title_activity_main">heracoin</string>
+    <string name="package_name">io.ionic.heracoin</string>
+    <string name="custom_url_scheme">io.ionic.heracoin</string>
 </resources>
