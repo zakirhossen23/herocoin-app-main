@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import './NFT.css';
 import { deployNFT, mintNFTWithUri, mintMultipleNFTWithUri } from '@tatumio/tatum';
 import { allnft } from "./storing";
+import { setingid } from "./nftall";
 
 export function NFT() {
     let history = useHistory();
@@ -24,7 +25,7 @@ export function NFT() {
                 <img id="nftimage" src={imagesource} className="imageframe"></img>
 
                 <div onClick={() =>{allnft.push(storenumber);
-                    history.push('NFTALL')} } className="footer-button">Get it</div>
+                    history.push('NFTALL'); setingid(0)} } className="footer-button">Get it</div>
             </div>
         </div>
     );
