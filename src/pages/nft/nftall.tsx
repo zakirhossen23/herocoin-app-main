@@ -41,6 +41,8 @@ export function NFTALL() {
                 <div id="collectedall" className="collectedall">
                 </div>
   </div>
+  <div onClick={() =>{
+                    history.push('stories')} } className="footer-button">Stories</div>
         </div>
     );
 
