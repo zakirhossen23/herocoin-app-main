@@ -71,7 +71,43 @@
     margin-bottom: 10px;
 }
 
-.imageframe {
+.nftallimageframe {
+    width: 128%;
+    height: 100%;
+}
+
+.nftalldate {
+    display: initial;
+    position: relative;
+    justify-content: left;
+    justify-items: left;
+    margin-left: 47px;
+    color: #e34331;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.nftallcontainer {
+    display: block;
+    width: min-content;
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin: 20px;
+    height: 20%;
+}
+
+.notimagecontainer {
+    width: calc(100% - 40px);
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin: 20px;
+    height: 97%;
+}
+
+.collectedall {
+    display: flex;
     width: 100%;
-    height: 70%;
+    flex-wrap: wrap;
+    overflow-y: overlay;
+    height: 90%;
 }

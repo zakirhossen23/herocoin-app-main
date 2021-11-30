@@ -10,30 +10,37 @@ export function NFTALL() {
     async function creating() {
         for (let i = 0; i < Number(allnft.length); i++) {
             var newelement = document.createElement("img") as HTMLImageElement
-            newelement.src = "/assets/NFT/" + allnft[i] +".png"
-            newelement.className = "imageframe"
-            allimage.push(newelement.outerHTML)      
+            newelement.src = "/assets/NFT/" + allnft[i] + ".png"
+            newelement.className = "nftallimageframe"
+            allimage.push('<div class="nftallcontainer">' + newelement.outerHTML + '<p class="nftalldate">30/11/2021</p></div>')
         }
 
     }
     creating()
+
     async function creatingimages() {
         for (let i = 0; i < Number(allnft.length); i++) {
-            (document.getElementById('collectedall') as HTMLDivElement).appendChild( allimage[i] as HTMLImageElement)
- 
+            (document.getElementById('collectedall') as HTMLDivElement).innerHTML = (document.getElementById('collectedall') as HTMLDivElement).innerHTML + allimage[i]
+
         }
 
-          }
+    }
+    let used = 1;
+
+    setTimeout(function(){
+        if (used === 1){
+            creatingimages();
+            used = 0;
+        }
+        
+    }, 200);
     return (
         <div className="page NFT">
-            <div className="container">
-                <div className="title">All collected NFT</div>
-                <div id="collectedall">
-               
+            <div className="notimagecontainer">
+                <div className="title">Collected NFTS</div>
+                <div id="collectedall" className="collectedall">
                 </div>
-
-                <div onClick={() =>{creatingimages()} } className="footer-button">Get it</div>
-            </div>
+  </div>
         </div>
     );
 
