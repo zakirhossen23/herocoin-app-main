@@ -36,6 +36,7 @@ import { Ticket } from './pages/ticket/Ticket';
 import { Name } from './pages/auth/name/name';
 import { DonateBlockchain } from './pages/donate/donateblockchain/donateblockchain';
 import { NFT } from './pages/nft/NFT';
+import { NFTALL } from './pages/nft/nftall';
 
 function App() {
   return (
@@ -111,8 +112,6 @@ function App() {
         <Route path="/donateblockchain">
           <DonateBlockchain />
         </Route>
- 
-
         <Route path="/thank-you">
           <ThankYou />
         </Route>
@@ -131,6 +130,10 @@ function App() {
         <Route path="/assets/NFT/">
           
         </Route>
+        <Route path="/NFTALL">
+          <NFTALL/>
+          </Route>
+
       </Switch>
     </Router>
   );
