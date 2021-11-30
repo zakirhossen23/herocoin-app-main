@@ -72,7 +72,7 @@
 }
 
 .nftallimageframe {
-    width: 128%;
+    width: 104%;
     height: 100%;
 }
 
@@ -81,7 +81,7 @@
     position: relative;
     justify-content: left;
     justify-items: left;
-    margin-left: 47px;
+    margin-left: 18px;
     color: #e34331;
     font-weight: bolder;
     font-size: 20px;
@@ -109,5 +109,4 @@
     width: 100%;
     flex-wrap: wrap;
     overflow-y: overlay;
-    height: 90%;
 }
