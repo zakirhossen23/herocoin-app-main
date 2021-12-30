@@ -1,0 +1,2 @@
+Metis = login in metis and use their account
+Donate with metis -> Get Polis account Wallet Address -> get and add cryptoPunk into that wallet.

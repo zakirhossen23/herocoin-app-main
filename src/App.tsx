@@ -37,6 +37,8 @@ import { Name } from './pages/auth/name/name';
 import { DonateBlockchain } from './pages/donate/donateblockchain/donateblockchain';
 import { NFT } from './pages/nft/NFT';
 import { NFTALL } from './pages/nft/nftall';
+import { CryptoPunks } from './pages/cryptoPunks/CryptoPunks';
+import { CryptoPunksALL } from './pages/cryptoPunks/CryptoPunksall';
 
 function App() {
   return (
@@ -118,6 +120,9 @@ function App() {
         <Route path="/NFT">
           <NFT />
         </Route>
+        <Route path="/CryptoPunks">
+          <CryptoPunks />
+        </Route>
         <Route path="/stories">
           <Stories />
         </Route>
@@ -128,11 +133,14 @@ function App() {
           <Splash />
         </Route>
         <Route path="/assets/NFT/">
-          
+
         </Route>
         <Route path="/NFTALL">
-          <NFTALL/>
-          </Route>
+          <NFTALL />
+        </Route>
+        <Route path="/CryptoPunksALL">
+          <CryptoPunksALL />
+        </Route>
 
       </Switch>
     </Router>

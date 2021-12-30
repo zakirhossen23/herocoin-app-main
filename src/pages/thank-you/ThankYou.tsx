@@ -9,24 +9,44 @@ import { useHistory } from 'react-router-dom';
 import { gotnumbers } from '../auth/savedvariable';
 
 export function ThankYou() {
-    let history = useHistory();
+  let history = useHistory();
 
 
-    return (
-        <div className="page thanks">
-            <img className="top" src={ThankYouImg} />
-            <img className="thank-you-message" src={ThankYouMessage} />
+  return (
+    <div className="page thanks">
+      <img className="top" src={ThankYouImg} />
+      <img className="thank-you-message" src={ThankYouMessage} />
 
-            <img onClick={() => history.push("/stories")} className="stories-button" src={StoriesButton} />
-            <div ><div className='nftdiv'>
-                 <a className='nfttext'>NFT</a>
-            </div>
-               
-                   <img onClick={() => history.push("/NFT")} className="stories-button" src={NFTButton} />
-            </div>
-         
-            <span className="spacer"></span>
-            <img className="tabbar" src={TabbarInsights} />
+      <img
+        onClick={() => history.push("/stories")}
+        className="stories-button"
+        src={StoriesButton}
+      />
+      <div>
+        <div className="nftdiv">
+          <a className="nfttext" href="/NFT">NFT</a>
         </div>
-    );
+
+        <img
+          onClick={() => history.push("/NFT")}
+          className="stories-button"
+          src={NFTButton}
+        />
+      </div>
+      <div>
+        <div className="nftdiv">
+          <a className="nfttext" href="/CryptoPunks">CryptoPunks</a>
+        </div>
+
+        <img
+          onClick={() => history.push("/CryptoPunks")}
+          className="stories-button"
+          src={NFTButton}
+        />
+      </div>
+
+      <span className="spacer"></span>
+      <img className="tabbar" src={TabbarInsights} />
+    </div>
+  );
 }
